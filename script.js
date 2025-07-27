@@ -1,9 +1,8 @@
-//your JS code here. If required.
-var counter = 0;
+const counterElement = document.getElementById("counter");
+    const incrementBtn = document.getElementById("incrementBtn");
 
-function increment() {
-	const elm = document.getElementById("counter_val");
-	alert(counter);
-	counter++;
-	elm.textContent = counter;
-}
+    incrementBtn.addEventListener("click", () => {
+      const currentValue = parseInt(counterElement.textContent, 10);
+      alert(`Current counter value: ${currentValue}`);
+      counterElement.textContent = currentValue + 1;
+    });
